@@ -1,6 +1,11 @@
-import React from "react"
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="stylesheet" href="about-us.css">
+</head>
 <body>
     <header>
         <nav>
@@ -12,14 +17,15 @@ import React from "react"
         </nav>
     </header>
     <main>
-        <section class="about">
-            <h1>About Us</h1>
-            <p>Total clean mart adalah sebuah platform website yang menyediakan berbagai macam barang kebersihan untuk meringankan pekerjaan rumah anda</p>
+        <section class="about-us">
+            <h1>Tentang Kami</h1>
+            <p>Total clean mart adalah sebuah platform yang menyediakan berbagai macam barang untuk menunjang kebersihan pada kamar mandi anda</p>
             <h2>Misi Kami</h2>
             <p>"Kebersihan bukanlah tujuan, tapi merupakan gaya hidup untuk menciptakan lingkungan yang sehat dan nyaman bagi semua."</p>
             <h2>Tim Kami</h2>
             <ul>
                 <li>
+                    <img src="john.jpg" alt="John Doe">
                     <h3>John Doe</h3>
                     <p>Founder & CEO</p>
                 </li>
@@ -30,5 +36,5 @@ import React from "react"
             </ul>
         </section>
     </main>
-    </body>
+</body>
 </html>
