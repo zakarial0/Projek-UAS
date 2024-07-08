@@ -8,6 +8,12 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-postcss",
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon" : "src/images/web-icon.png"
+      },
+    },
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -17,6 +23,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/pembersih-lantai/sapu-multifungsi`,
       },
     },
     {

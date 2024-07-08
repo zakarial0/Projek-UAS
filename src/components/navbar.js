@@ -3,20 +3,20 @@ import React from "react";
 
 const Navbar = () => {  
     return(
-        <div className="bg-blue-300 w-full h-6 flex">
-            <h1>logo</h1>
-            <ul className="flex font-medium space-x-4">
+        <div className="bg-[#4FC3F7] flex w-full py-5">
+            <h1 className="ms-8 w-4/6">TotalClean</h1>
+            <ul className="flex font-medium space-x-9 w-2/6 me-8">
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/" className="text-xl font-bold text-color">Home</Link>
                 </li>
                 <li>
-                    <Link to="/produk">Products</Link>
+                    <Link to="/produk" className="text-xl font-bold text-color">Products</Link>
                 </li>
                 <li>
-                    <Link to="/about">About Us</Link>
+                    <Link to="/about" className="text-xl font-bold text-color">About Us</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact" className="text-xl font-bold text-color">Contact</Link>
                 </li>
             </ul>
         </div>
