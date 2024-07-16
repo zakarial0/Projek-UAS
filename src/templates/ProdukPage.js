@@ -10,7 +10,9 @@ export default function ProdukPage ({ data }){
         <div>
           <div className="bg-[#4FC3F7] flex w-full py-5">
             <div className="ms-8 w-4/6">
-              <Link to="/produk" className="text-xl font-bold text-color">Kembali</Link>
+              <Link to="/produk" className="text-xl font-bold text-color">
+              Kembali
+              </Link>
             </div>
             <ul className="flex font-medium space-x-9 w-2/6 me-8">
                 <li>
@@ -27,11 +29,11 @@ export default function ProdukPage ({ data }){
                 </li>
             </ul>
         </div>
-            <div className="grid grid-cols-2">
-                <div>
-                    <GatsbyImage image={image01} alt={keyword1} />
+            <div className="grid grid-cols-4 gap-4 mx-8">
+                <div className="col-span-2 col-start-1">
+                    <GatsbyImage image={image01} alt={keyword1} class="h-40"/>
                 </div>
-                <div>
+                <div className="col-start-3 col-span-2">
                     <h1>{title}</h1>
                     <div>
                         {body}
@@ -52,7 +54,7 @@ query ProjectDetail($slug: String) {
       keyword1
       image1 {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(height: 300, width: 300)
           }
       }
       image2 {

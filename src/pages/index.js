@@ -1,11 +1,16 @@
 import * as React from "react";
 import Layout from "../components/layout";
+import Banner from "../components/banner";
+import Features from "../components/metodeBelajar";
+import Callaction from "../components/cta";
 
 
 const IndexPage = () => {
   return (
     <Layout>
-      <h1 className="text-black m-10 text-2xl">Landing Page</h1>   
+      <Banner/>
+      <Features/>
+      <Callaction/>
     </Layout>
   )
 }
