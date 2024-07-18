@@ -1,46 +1,33 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Layout from "../components/layout";
 
 export default function ProdukPage ({ data }){
     const { body } = data.mdx
     const {title, keyword1} = data.mdx.frontmatter
     const image01 = getImage(data.mdx.frontmatter.image1)
     return(
-        <div>
-          <div className="bg-[#4FC3F7] flex w-full py-5">
-            <div className="ms-8 w-4/6">
-              <Link to="/produk" className="text-xl font-bold text-color">
-              Kembali
-              </Link>
-            </div>
-            <ul className="flex font-medium space-x-9 w-2/6 me-8">
-                <li>
-                    <Link to="/" className="text-xl font-bold text-color">Home</Link>
-                </li>
-                <li>
-                    <Link to="/produk" className="text-xl font-bold text-color">Products</Link>
-                </li>
-                <li>
-                    <Link to="/about" className="text-xl font-bold text-color">About Us</Link>
-                </li>
-                <li>
-                    <Link to="/contact" className="text-xl font-bold text-color">Contact</Link>
-                </li>
-            </ul>
-        </div>
-            <div className="grid grid-cols-4 gap-4 mx-8">
-                <div className="col-span-2 col-start-1">
+        <Layout>
+          <div className="flex ">
+            <div className="w-2/3 ">
+                <div className="">
                     <GatsbyImage image={image01} alt={keyword1} class="h-40"/>
                 </div>
-                <div className="col-start-3 col-span-2">
-                    <h1>{title}</h1>
-                    <div>
+                <div className="px-12">
+                    <h1 className="text-2xl font-bold">
+                      {title}
+                    </h1>
+                    <div className="px-12 text-lg w-96">
                         {body}
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="w-1/3 ">
+              test
+            </div>
+          </div>
+        </Layout>
     )
 }
 

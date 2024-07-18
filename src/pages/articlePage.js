@@ -13,9 +13,9 @@ const ProdukPage = ({ data }) => {
                             <article className="bg-[#bebebe] w-full h-96 rounded-lg shadow-xl mx-2 my-1 border border-[#0d47a1] hover:border-[#81d4fa]">
                               <Link to={node.frontmatter.slug} key={node.id}>
                                 <GatsbyImage image={getImage(node.frontmatter.image1)} className="rounded-tl-lg rounded-tr-lg h-3/5"/>
-                                <div className="w-72 h-2/5 px-8 py-3 rounded-br-xl rounded-bl-xl">
-                                  <h1 className="font-medium">{node.frontmatter.title}</h1>
-                                  <p>Rp {node.frontmatter.harga}</p>
+                                <div className=" h-2/5 px-8 py-3 rounded-br-xl rounded-bl-xl">
+                                  <h1 className="font-medium text-justify">{node.frontmatter.title}</h1>
+                                  <p>{node.frontmatter.date}</p>
                                 </div>
                               </Link>
                             </article>
@@ -28,7 +28,7 @@ const ProdukPage = ({ data }) => {
 
 export const query = graphql `
 query MyQuery {
-  allMdx {
+  allMdx(sort: {frontmatter: {date: DESC}}) {
     edges {
       node {
         frontmatter {
@@ -39,7 +39,7 @@ query MyQuery {
           }
           title
           slug
-          harga
+          date(formatString: "YYYY-MM-DD")
         }
         id
       }
