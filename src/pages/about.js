@@ -60,7 +60,45 @@ const AboutPage = () => {
             </div>
         </div>
         </Layout>
+        
     )
 }
+<body>
+	<header>
+		<h1>Fasilitas Yang Tersedia Di Sekolah Kami</h1>
+	</header>
+	<main>
+		<section id="Ruang kelas">
+			<h2>Ruang Kelas</h2>
+			<p>Ruang kelas kami dilengkapi dengan fasilitas modern, termasuk papan tulis interaktif, komputer, dan akses internet berkecepatan tinggi</p>
+			<img src="images/Fasilitas/R. Kelas ( New ).jpg" alt="Ruang Kelas">
+		</section>
+		<section id="Perpustakaan">
+			<h2>Perpustakaan</h2>
+			<p>Perpustakaan kami adalah pusat pengetahuan, menyediakan akses ke banyak koleksi buku, jurnal, dan sumber daya online</p>
+			<img src="images/Fasilitas/Perpustakaan.jpg" alt="Perpustakaan">
+		</section>
+		<section id="Lab. Kimia">
+			<h2>Lab. Kimia</h2>
+			<p>Laboratorium kami dilengkapi dengan peralatan dan teknologi modern, memungkinkan siswa kami melakukan eksperimen dan investigasi di lingkungan yang aman dan terkendali</p>
+			<img src="images/Fasilitas/Lab. Kimia.jpg" alt="Lab. Kimia">
+		</section>
+		<section id="Olahraga">
+			<h2>Lapangan Basket</h2>
+			<p>Lapangan Basket yang bisa digunakan pada waktu ekstrakurikuler maupun turnamen guna memadai dalam keahlian para siswa</p>
+			<img src="images/Fasilitas/Lap. Basket.jpg" alt="Olahraga">
+		</section>
+		<section id="Mosque">
+			<h2>Masjid</h2>
+			<p>Fasilitas yang memungkinkan siswa dan staf sekolah untuk menjalankan ibadah secara praktis dan nyaman tanpa harus meninggalkan lingkungan sekolah.</p>
+			<img src="images/Fasilitas/Masjid.jpg" alt="Mosque">
+		</section>
+		<section id="Lab. Komputer">
+			<h2>Lab. Komputer</h2>
+			<p>Lab komputer dirancang untuk menyediakan akses ke perangkat keras dan perangkat lunak yang diperlukan untuk mendukung pembelajaran dan pengajaran di berbagai mata pelajaran.</p>
+			<img src="images/Fasilitas/Lab. Komputer.jpg" alt="Lab. Komputer">
+		</section>
+	</main>
+</body>
 
 export default AboutPage;
