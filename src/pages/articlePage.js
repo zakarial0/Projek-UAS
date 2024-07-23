@@ -12,7 +12,7 @@ const ProdukPage = ({ data }) => {
                         data.allMdx.edges.map(({node}) => (
                             <article className="bg-[#bebebe] w-full h-96 rounded-lg shadow-xl mx-2 my-1 border border-[#0d47a1] hover:border-[#81d4fa]">
                               <Link to={node.frontmatter.slug} key={node.id}>
-                                <GatsbyImage image={getImage(node.frontmatter.image1)} className="rounded-tl-lg rounded-tr-lg h-3/5"/>
+                                <GatsbyImage image={getImage(node.frontmatter.image)} className="rounded-tl-lg rounded-tr-lg h-3/5"/>
                                 <div className=" h-2/5 px-8 py-3 rounded-br-xl rounded-bl-xl">
                                   <h1 className="font-medium text-justify">{node.frontmatter.title}</h1>
                                   <p>{node.frontmatter.date}</p>
@@ -32,7 +32,7 @@ query MyQuery {
     edges {
       node {
         frontmatter {
-          image1 {
+          image {
             childImageSharp {
               gatsbyImageData
             }

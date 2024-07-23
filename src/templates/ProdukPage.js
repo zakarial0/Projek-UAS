@@ -1,18 +1,19 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 
 export default function ProdukPage ({ data }){
     const { body } = data.mdx
-    const {title, keyword1} = data.mdx.frontmatter
-    const image01 = getImage(data.mdx.frontmatter.image1)
+    const {title, keyword,} = data.mdx.frontmatter
+    const featureimage = getImage(data.mdx.frontmatter.image)
+    
     return(
         <Layout>
           <div className="flex ">
             <div className="w-2/3 ">
-                <div className="">
-                    <GatsbyImage image={image01} alt={keyword1} class="h-40"/>
+                <div className=" px-8 py-10">
+                    <GatsbyImage image={featureimage} alt={keyword}/>
                 </div>
                 <div className="px-12">
                     <h1 className="text-2xl font-bold">
@@ -22,9 +23,6 @@ export default function ProdukPage ({ data }){
                         {body}
                     </div>
                 </div>
-            </div>
-            <div className="w-1/3 ">
-              test
             </div>
           </div>
         </Layout>
@@ -36,20 +34,11 @@ query ProjectDetail($slug: String) {
   mdx(frontmatter: {slug: {eq: $slug}}) {
     frontmatter {
       title
-      keyword3
-      keyword2
-      keyword1
-      image1 {
+      keyword
+      image {
             childImageSharp {
-              gatsbyImageData(height: 300, width: 300)
+              gatsbyImageData(layout: CONSTRAINED, height: 300, width: 1200, aspectRatio: 0.3333)       
           }
-      }
-      image2 {
-        childImageSharp {
-          fluid {
-            src
-          }
-        }
       }
     }
     body
