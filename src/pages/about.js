@@ -1,6 +1,34 @@
 import React from "react";
 import Layout from "../components/layout";
 import { StarIcon ,ClipboardListIcon, AcademicCapIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from "@heroicons/react/outline";
+import kelas from "../images/Fasilitas/R. Kelas ( New ).jpg"
+
+const fasilitas = [
+    {
+        title: 'Ruang kelas',
+        srcImage: {kelas}
+    },
+    {
+        title: 'Perpustakaan',
+        srcImage: "../images/Fasilitas/Perpustakaan.jpg"
+    },
+    {
+        title: 'Lab. Kimia',
+        srcImage: "../images/Fasilitas/Lab. Kimia.jpg"
+    },
+    {
+        title: 'Lapangan Basket',
+        srcImage: "../images/Fasilitas/Lap. Basket.jpg"
+    },
+    {
+        title: 'Masjid',
+        srcImage: "../images/Fasilitas/Masjid.jpg"
+    },
+    {
+        title: 'Lab. Komputer',
+        srcImage: "../images/Fasilitas/Lab. Komputer.jpg"
+    },
+]
 
 const mision = [
     {
@@ -58,47 +86,24 @@ const AboutPage = () => {
                     </dl>
                 </div>
             </div>
+            <div>
+            <h1>Fasilitas yang Tersedia</h1>
+            <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-6 md:gap-x-14 md:gap-y-10">
+            {fasilitas.map(fasilitas => (
+              <div key={fasilitas.title} className="relative">
+                <dt>
+                  <img src={fasilitas.srcImage} alt={fasilitas.title}/>
+                </dt>
+                <dd className="mt-2 ml-16 text-base text-gray-600">{fasilitas.title}</dd>
+              </div>
+            ))}
+          </dl>
+            </div>
+            
         </div>
         </Layout>
         
     )
 }
-<body>
-	<header>
-		<h1>Fasilitas Yang Tersedia Di Sekolah Kami</h1>
-	</header>
-	<main>
-		<section id="Ruang kelas">
-			<h2>Ruang Kelas</h2>
-			<p>Ruang kelas kami dilengkapi dengan fasilitas modern, termasuk papan tulis interaktif, komputer, dan akses internet berkecepatan tinggi</p>
-			<img src="images/Fasilitas/R. Kelas ( New ).jpg" alt="Ruang Kelas">
-		</section>
-		<section id="Perpustakaan">
-			<h2>Perpustakaan</h2>
-			<p>Perpustakaan kami adalah pusat pengetahuan, menyediakan akses ke banyak koleksi buku, jurnal, dan sumber daya online</p>
-			<img src="images/Fasilitas/Perpustakaan.jpg" alt="Perpustakaan">
-		</section>
-		<section id="Lab. Kimia">
-			<h2>Lab. Kimia</h2>
-			<p>Laboratorium kami dilengkapi dengan peralatan dan teknologi modern, memungkinkan siswa kami melakukan eksperimen dan investigasi di lingkungan yang aman dan terkendali</p>
-			<img src="images/Fasilitas/Lab. Kimia.jpg" alt="Lab. Kimia">
-		</section>
-		<section id="Olahraga">
-			<h2>Lapangan Basket</h2>
-			<p>Lapangan Basket yang bisa digunakan pada waktu ekstrakurikuler maupun turnamen guna memadai dalam keahlian para siswa</p>
-			<img src="images/Fasilitas/Lap. Basket.jpg" alt="Olahraga">
-		</section>
-		<section id="Mosque">
-			<h2>Masjid</h2>
-			<p>Fasilitas yang memungkinkan siswa dan staf sekolah untuk menjalankan ibadah secara praktis dan nyaman tanpa harus meninggalkan lingkungan sekolah.</p>
-			<img src="images/Fasilitas/Masjid.jpg" alt="Mosque">
-		</section>
-		<section id="Lab. Komputer">
-			<h2>Lab. Komputer</h2>
-			<p>Lab komputer dirancang untuk menyediakan akses ke perangkat keras dan perangkat lunak yang diperlukan untuk mendukung pembelajaran dan pengajaran di berbagai mata pelajaran.</p>
-			<img src="images/Fasilitas/Lab. Komputer.jpg" alt="Lab. Komputer">
-		</section>
-	</main>
-</body>
 
 export default AboutPage;
