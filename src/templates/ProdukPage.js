@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 
 export default function ProdukPage ({ data }){
     const { body } = data.mdx
-    const {title, keyword,} = data.mdx.frontmatter
+    const {title} = data.mdx.frontmatter
     const featureimage = getImage(data.mdx.frontmatter.image)
     
     return(
@@ -13,13 +13,13 @@ export default function ProdukPage ({ data }){
           <div className="flex ">
             <div className="w-2/3 ">
                 <div className=" px-8 py-10">
-                    <GatsbyImage image={featureimage} alt={keyword}/>
+                    <GatsbyImage image={featureimage} alt="al-hikmah foto"/>
                 </div>
                 <div className="px-12">
                     <h1 className="text-2xl font-bold">
                       {title}
                     </h1>
-                    <div className="px-12 text-lg w-96">
+                    <div className="px-14 text-lg w-96">
                         {body}
                     </div>
                 </div>
@@ -34,10 +34,9 @@ query ProjectDetail($slug: String) {
   mdx(frontmatter: {slug: {eq: $slug}}) {
     frontmatter {
       title
-      keyword
       image {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, height: 300, width: 1200, aspectRatio: 0.3333)       
+              gatsbyImageData(layout: CONSTRAINED, height: 300, width: 1200)       
           }
       }
     }
